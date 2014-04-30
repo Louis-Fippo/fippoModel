@@ -1,0 +1,17 @@
+% Diapo d'intro
+
+\begin{frame}[c]
+  \frametitle{Frame Title}
+
+%\todo{À revoir}
+
+\begin{block}
+ 
+ \begin{itemize}
+  \item un nouvel item
+ \end{itemize}
+
+\end{block}
+
+
+\end{frame}

@@ -1,0 +1,110 @@
+% Performances et conclusion
+
+\begin{frame}[c]
+  \frametitle{Implementation}
+
+Complexity:
+
+\begin{itemize}
+  \item Building the graph:
+  \begin{itemize}
+    \item Polynomial in the number of sorts
+    \item Exponential in the number of processes in each sort
+  \end{itemize}
+  \item Analysing the graph:
+  \begin{itemize}
+    \item Polynomial in the size of the graph
+  \end{itemize}
+\end{itemize}
+
+\pause
+\bigskip
+\small
+\begin{tabular}{r||c|c|c|c||c|c|c|}
+\hline
+\tval{Model} & Sorts & Procs & Actions & States & libddd$^1$ & GINsim$^2$ & \Pint \\\hline
+\tval{\ex{egfr20}} & 35 & 196 & 670 & $2^{64}$ & & $<$1s & \tval{0.35s} \\\hline
+\tval{\ex{tcrsig40}} & 54 & 156 & 301 & $2^{73}$ & & $\infty$ & \tval{0.2s} \\\hline
+\tval{\ex{tcrsig94}} & 133 & 448 & 1124 & $2^{194}$ & [13min -- $\infty$] & & \tval{0.8s} \\\hline
+%\tval{\ex{egfr104}} & 193 & 748 &  2356 & $2^{320}$ &  $\infty$ & $\infty$ & \tval{0.050s}\\\hline
+\end{tabular}
+
+\medskip
+\quad$^1$ LIP6/Move\\
+\quad$^2$ TAGC/IGC
+
+%S = Sorts \quad CS = Cooperative sorts \quad P = Processes \quad A = Actions
+
+%\cmodels
+\bigskip
+\citeegfra\\
+\citetcrsiga\\
+\citetcrsigb\\
+\end{frame}
+
+
+
+\begin{frame}[c]
+  \frametitle{Summary}
+
+\begin{itemize}
+  \item The Process Hitting framework
+  \begin{fleches}
+    \item Restricted concurrent actions
+    \item Efficient static analysis on biological models (few expression levels)
+  \end{fleches}
+  
+  \smallskip
+  \item But raw Process Hitting is insufficient to models ADNs
+  \begin{fleches}
+    \item How to represent cooperations?
+    \item Cooperative sorts only represent a combination of past states
+  \end{fleches}
+  
+  \smallskip
+  \item Solution: prioritised actions
+  \begin{fleches}
+    \item Accurate cooperative sorts
+    \item Expressivity of ADN is reached
+  \end{fleches}
+\end{itemize}
+\end{frame}
+
+
+
+\begin{frame}[c]
+  \frametitle{Conclusion}
+
+\begin{itemize}
+  \item Achieved:
+  \begin{itemize}
+    \item Rise the expressivity of PH
+    \item Efficient reachability analysis in ADNs
+  \end{itemize}
+  
+  \smallskip
+  \item Value:
+  \begin{itemize}
+    \item Model a whole class of ADNs in one PH model
+    \item Efficiently analyse reachability for the whole class
+    \item Refine the PH model to match desired behaviour
+    \item Infer the underlying class of ADNs\\\quad\tcite{\citefpimrcmsb}
+  \end{itemize}
+\end{itemize}
+
+
+
+\pause
+\bigskip
+\begin{flushright}
+\Large
+\textcolor{couleurtheme}{Outlook}\hspace*{2.7em}
+\end{flushright}
+
+\begin{itemize}
+  \item Allow prioritised actions even for biological evolutions
+  \item Allow $n>2$ classes of priority
+  %\item $2$ priorities: first attempt to add priorities in the PH framework
+\end{itemize}
+\qquad~\f Model actions with delays by using priorities
+\end{frame}
