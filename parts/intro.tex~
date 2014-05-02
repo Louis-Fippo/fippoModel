@@ -5,13 +5,15 @@
 
 %\todo{À revoir}
 
-\begin{block}
+
  
  \begin{itemize}
-  \item un nouvel item
+  \item un \alert{nouvel item}
+  \item un suivant
+  \item et un troisième ...
  \end{itemize}
 
-\end{block}
+
 
 
 \end{frame}

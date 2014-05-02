@@ -213,7 +213,7 @@
 \centering
 \Large
 \textbf{%
-{\normalsize\theconference{}}\\~\\%
+{\normalsize\theconference{Un titre }}\\~\\%
 \inserttitle
 }
 \end{beamercolorbox}
